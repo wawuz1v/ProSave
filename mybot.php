@@ -209,7 +209,10 @@ if ($text == '/start') {
     }
     elseif (strpos($text, "https://www.instagram.com/") !== false or strpos($text, "https://instagram.com/stories/") !== false) {
     //    $res = json_decode(InstagramVideo($text));
-
+        $telegram->sendMessage([
+            'chat_id' => $chatID,
+            'text' => 'ведутся технические работы, скоро снова заработает'
+        ]);
     }
 }
 
